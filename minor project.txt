@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechVolution 2024 Registration</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background-color: #1e3a8a; /* Adjusted blue for better contrast */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .form-control, .form-check-input, .form-control:focus, .form-check-input:focus {
+            background-color: #2a4365;
+            border: 1px solid #4a5568;
+            color: #ffffff;
+        }
+
+        .form-control::placeholder {
+            color: #a0aec0;
+        }
+
+        .form-control:focus {
+            border-color: #63b3ed;
+            box-shadow: 0 0 5px rgba(99, 179, 237, 0.5);
+        }
+
+        .form-check-label {
+            color: #e2e8f0;
+        }
+
+        .btn-primary {
+            background-color: #3182ce;
+            border-color: #3182ce;
+        }
+
+        .btn-primary:hover {
+            background-color: #2b6cb0;
+            border-color: #2c5282;
+        }
+
+        .text-danger {
+            color: #e53e3e;
+        }
+
+        .modal-content {
+            background-color: #1a202c;
+            color: #ffffff;
+            border-radius: 8px;
+        }
+
+        .modal-header, .modal-footer {
+            border-color: #2d3748;
+        }
+
+        .modal-header .close {
+            color: #ffffff;
+        }
+
+        .modal-backdrop.show {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">TechVolution 2024 Registration</h2>
+        <form id="registrationForm" novalidate>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" class="form-control" id="dob" required>
+                <div class="invalid-feedback">Please enter your date of birth.</div>
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="genderMale" value="Male" required>
+                    <label class="form-check-label" for="genderMale">Male</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="Female" required>
+                    <label class="form-check-label" for="genderFemale">Female</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="genderNonBinary" value="Non-binary" required>
+                    <label class="form-check-label" for="genderNonBinary">Non-binary</label>
+                </div>
+                <div class="invalid-feedback">Please select your gender.</div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" class="form-control" id="phone" placeholder="Enter your phone number" pattern="\d{10}" required>
+                <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
+            </div>
+            <div class="form-group">
+                <label for="address">Street Address</label>
+                <input type="text" class="form-control" id="address" placeholder="Enter your street address" required>
+                <div class="invalid-feedback">Please enter your street address.</div>
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" class="form-control" id="city" placeholder="Enter your city" required>
+                <div class="invalid-feedback">Please enter your city.</div>
+            </div>
+            <div class="form-group">
+                <label for="state">State</label>
+                <select class="form-control" id="state" required>
+                    <option value="">Select your state</option>
+                    <option value="TELANGANA">TELANGANA</option>
+                    <option value="MAHARASHTRA">MAHARASHTRA</option>
+                    <option value="ASSAM">ASSAM</option>
+                    <option value="TAMILNADU">TAMIL NADU</option>
+                    <!-- Add other states as needed -->
+                </select>
+                <div class="invalid-feedback">Please select your state.</div>
+            </div>
+            <div class="form-group">
+                <label for="zip">Zip Code</label>
+                <input type="text" class="form-control" id="zip" placeholder="Enter your zip code" pattern="\d{5}" required>
+                <div class="invalid-feedback">Please enter a valid 5-digit zip code.</div>
+            </div>
+            <div class="form-group">
+                <label for="preferences">Event Preferences</label>
+                <select class="form-control" id="preferences" multiple required>
+                    <option value="workshops">Workshops</option>
+                    <option value="essay writing">Essay Writing</option>
+                    <option value="project expo">Project Expo</option>
+                    <option value="poster presentation">Poster Presentation</option>
+                    <option value="paper presentation">Paper Presentation</option>
+                </select>
+                <div class="invalid-feedback">Please select at least one event preference.</div>
+            </div>
+            <div class="form-group">
+                <label for="diet">Dietary Restrictions</label>
+                <textarea class="form-control" id="diet" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="tshirt">T-shirt Size</label>
+                <select class="form-control" id="tshirt" required>
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">X-Large</option>
+                </select>
+                <div class="invalid-feedback">Please select your T-shirt size.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="successModalLabel">Registration Successful</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Your registration was successful! Thank you for registering for TechVolution 2024.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Clear previous error messages
+            let errorMessages = document.querySelectorAll('.text-danger');
+            errorMessages.forEach(function(error) {
+                error.remove();
+            });
+
+            // Validate form fields
+            let form = event.target;
+            if (!form.checkValidity()) {
+                event.stopPropagation();
+                form.classList.add('was-validated');
+            } else {
+                // Show success modal
+                $('#successModal').modal('show');
+            }
+        });
+
+        function showError(inputId, message) {
+            let inputElement = document.getElementById(inputId);
+            let errorElement = document.createElement('div');
+            errorElement.className = 'text-danger';
+            errorElement.innerText = message;
+            inputElement.parentElement.appendChild(errorElement);
+        }
+    </script>
+</body>
+</html>
